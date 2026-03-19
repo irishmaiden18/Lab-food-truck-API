@@ -177,6 +177,17 @@ app.get("/italianOpen", (req, res) => {
 })
 
 // Any other Route
+app.all("/{*any}", (req, res) => {
+    
+    // prints on the server side when the client accesses a URL not defined above
+    console.log("No URL Reached!")
+
+    // send a failure response to the user
+    res.status(404).json ({
+        message: "failure",
+        payload: "This is not an appropriate route. Please try again!"
+    })
+})
 
 // set the port
 const PORT = 3000
