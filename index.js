@@ -18,8 +18,11 @@ let allFoodTrucks = [...foodTrucks.downtown, ...foodTrucks.midtown, ...foodTruck
 
 // URL ending in "/"
 app.get("/", (req, res) => {
+
+    // prints on the server side when the client accesses the route
     console.log("Reached All foodTrucks Route!")
 
+    // send the entire foodTruck object to the user
     res.json ({
         message: "success",
         payload: foodTrucks
@@ -28,8 +31,11 @@ app.get("/", (req, res) => {
 
 // URL ending in "/downtown"
 app.get("/downtown", (req, res) => {
+
+    // prints on the server side when the client accesses the route
     console.log("Reached downtown foodTrucks Route!")
 
+    // send only the downtown part of the foodTruck object to the user
     res.json ({
         message: "success",
         payload: foodTrucks.downtown
@@ -38,8 +44,11 @@ app.get("/downtown", (req, res) => {
 
 // URL ending in "/midtown"
 app.get("/midtown", (req, res) => {
+
+    // prints on the server side when the client accesses the route
     console.log("Reached midtown foodTrucks Route!")
 
+    // send only the midtown part of the foodTruck object to the user
     res.json ({
         message: "success",
         payload: foodTrucks.midtown
@@ -48,8 +57,11 @@ app.get("/midtown", (req, res) => {
 
 // URL ending in "/uptown"
 app.get("/uptown", (req, res) => {
+
+    // prints on the server side when the client accesses the route
     console.log("Reached uptown foodTrucks Route!")
 
+    // send only the uptown part of the foodTruck object to the user
     res.json ({
         message: "success",
         payload: foodTrucks.uptown
@@ -58,12 +70,16 @@ app.get("/uptown", (req, res) => {
 
 // URL ending in "/open"
 app.get("/open", (req, res) => {
+
+    // prints on the server side when the client accesses the route
     console.log("Reached open foodTrucks Route!")
 
+    // create a results array and populate it with only the foodTrucks that have an open property "true"
     const results = allFoodTrucks.filter((foodTruck) => {
         return foodTruck.open === true
     })
 
+    // send only the filtered results array to the user
     res.json ({
         message: "success",
         payload: results
@@ -72,12 +88,16 @@ app.get("/open", (req, res) => {
 
 // URL ending in "/closed"
 app.get("/closed", (req, res) => {
+
+    // prints on the server side when the client accesses the route
     console.log("Reached closed foodTrucks Route!")
 
+    // create a results array and populate it with only the foodTrucks that have an open property "false"
     const results = allFoodTrucks.filter((foodTruck) => {
         return foodTruck.open === false
     })
 
+    // send only the filtered results array to the user
     res.json ({
         message: "success",
         payload: results
