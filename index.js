@@ -71,7 +71,18 @@ app.get("/open", (req, res) => {
 })
 
 // URL ending in "/closed"
+app.get("/closed", (req, res) => {
+    console.log("Reached closed foodTrucks Route!")
 
+    const results = allFoodTrucks.filter((foodTruck) => {
+        return foodTruck.open === false
+    })
+
+    res.json ({
+        message: "success",
+        payload: results
+    })
+})
 
 // URL ending in "/pizza"
 
