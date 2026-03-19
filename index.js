@@ -159,6 +159,22 @@ app.get("/tacos", (req, res) => {
 })
 
 // URL ending in "/italianOpen"
+app.get("/italianOpen", (req, res) => {
+    
+    // prints on the server side when the client accesses the route
+    console.log("Reached Italian Open foodTrucks Route!")
+
+    // create a results array and populate it with only the foodTrucks that have italian in the cuisine property and have an open property of "true"
+    const results = allFoodTrucks.filter((foodTruck) => {
+        return (foodTruck.cuisine.includes("italian") && foodTruck.open === true)
+    })
+
+    // send only the filtered results array to the user
+    res.json ({
+        message: "success",
+        payload: results
+    })
+})
 
 // Any other Route
 
