@@ -123,6 +123,22 @@ app.get("/pizza", (req, res) => {
 })
 
 // URL ending in "/vegetarian"
+app.get("/vegetarian", (req, res) => {
+
+    // prints on the server side when the client acesses the route
+    console.log("Reached vegetarian foodTrucks Route!")
+
+    // create a results array and populate it with only the foodTrucks that have vegetarian in the cuisine property
+    const results = allFoodTrucks.filter((foodTruck) => {
+        return foodTruck.cuisine.includes("vegetarian")
+    })
+
+    // send only the filtered results array to the user
+    res.json ({
+        message: "success",
+        payload: results
+    })
+})
 
 //URL ending in "/tacos"
 

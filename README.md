@@ -100,7 +100,7 @@ const foodTrucks = {
 - DONE-- If the URL ends in /open, return only food trucks where open is true
 - DONE-- If the URL ends in /closed, return only food trucks where open is false
 - DONE-- If the URL ends in /pizza, return only trucks that serve "pizza"
-- If the URL ends in /vegetarian, return only trucks that serve "vegetarian"
+- DONE-- If the URL ends in /vegetarian, return only trucks that serve "vegetarian"
 - If the URL ends in /tacos, return only trucks that serve "tacos"
 - If the URL ends in /italianOpen, return only trucks that serve "italian" and are open
 - If the URL ends in anything else, respond with a failure message.
