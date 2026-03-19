@@ -1,0 +1,15 @@
+{
+  "name": "lab-food-truck-api",
+  "version": "1.0.0",
+  "description": "- Create a server using the Express module  \r - Create an API that serves data based on the URL request  \r - Practice sending JSON responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
